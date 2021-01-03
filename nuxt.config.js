@@ -23,6 +23,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    // nuxt-color-mode
+    '@nuxtjs/color-mode'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -33,6 +35,10 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // nuxt-auth
+    '@nuxtjs/auth-next',
+    // nuxt i18n
+    'nuxt-i18n'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -40,4 +46,15 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // middleware
+  router: {
+    // middleware: ['auth']
+  },
+  // i18n
+  i18n: {},
+
+  // transitions
+  pageTransition: "fade",
+  layoutTransition: "bounce"
 }
