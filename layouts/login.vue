@@ -1,16 +1,12 @@
 <template lang="pug">
-  .hero.is-primary.is-full
+  .hero.is-dark.is-fullheight
     .hero-body
         .container
-        
+            nuxt/
+
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
+<style lang="sass">
+    .hero-body
+        max-width: 100vw
+        max-height: 100vh
 </style>
