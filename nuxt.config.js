@@ -40,6 +40,11 @@ export default {
     // nuxt i18n
     'nuxt-i18n'
   ],
+  css: [
+    'bulma',
+    './assets/css/main.css',
+    './assets/css/buefy.scss',
+  ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},

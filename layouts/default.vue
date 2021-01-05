@@ -1,40 +1,20 @@
-<template>
-  <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="~assets/buefy.png" alt="Buefy" height="28" />
-        </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
-      </div>
-    </nav>
-
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">General</p>
-        <ul class="menu-list">
-          <li v-for="(item, key) of items" :key="key">
-            <nuxt-link :to="item.to" exact-active-class="is-active">
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <nuxt />
-      </div>
-    </section>
-  </div>
+<template lang="pug">
+  div
+    nav.navbar.header.has-shadow.is-dark(role="navigation" aria-label="main navigation")
+      .navbar-brand
+        a.navbar-item(href='/')
+          h1#main-title.title.is-3.has-text-white CASSIMIRO'S
+        div.navbar-burger
+          span
+          span
+          span
+    section.main-content.columns
+      aside.column.is-2.section
+        p.menu-label.is-hidden-touch.subtitle menu
+        ul.menu-list
+          li(v-for="(item,key) of items" :key="key")
+            nuxt-link(:to="item.to" exact-active-class="is-active")
+              b-icon(:icon="item.icon") {{ item.title }}
 </template>
 
 <script>
@@ -57,3 +37,7 @@ export default {
   },
 }
 </script>
+<style lang="sass">
+  #main-title
+    font-family: 'Doppio One'
+</style>
