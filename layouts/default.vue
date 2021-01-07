@@ -1,35 +1,50 @@
 <template lang="pug">
-  div
-    nav.navbar.header.has-shadow.is-dark(role="navigation" aria-label="main navigation")
-      .navbar-brand
-        a.navbar-item(href='/')
-          h1#main-title.title.is-3.has-text-white CASSIMIRO'S
-        div.navbar-burger
-          span
-          span
-          span
-    section.main-content.columns
-      aside.column.is-2.section
-        p.menu-label.is-hidden-touch.subtitle menu
-        ul.menu-list
-          li(v-for="(item,key) of items" :key="key")
-            nuxt-link(:to="item.to" exact-active-class="is-active")
-              b-icon(:icon="item.icon") {{ item.title }}
+  section.main-content.columns
+    aside#main-menu.column.is-2.section
+      Sidebar
+    div#space-content.column.is-10
+      div#main-content.container.m-4
+        nuxt/
+
 </template>
 
 <script>
+import Sidebar from '@/components/Sidebar'
 export default {
+  components: {
+    Sidebar
+  },
   data() {
     return {
+      open: true,
+      overlay: false,
+      fullheight: true,
+      fullwidth: false,
+      right: false,
       items: [
         {
-          title: 'Home',
+          title: 'Dashboard',
           icon: 'home',
           to: { name: 'index' },
         },
         {
-          title: 'Inspire',
-          icon: 'lightbulb',
+          title: 'Agendadamentos',
+          icon: 'calendar',
+          to: { name: 'inspire' },
+        },
+        {
+          title: 'Histórico',
+          icon: 'history',
+          to: { name: 'inspire' },
+        },
+        {
+          title: 'Clientes',
+          icon: 'account',
+          to: { name: 'inspire' },
+        },
+        {
+          title: 'Configurações',
+          icon: 'cog',
           to: { name: 'inspire' },
         },
       ],
@@ -38,6 +53,22 @@ export default {
 }
 </script>
 <style lang="sass">
-  #main-title
-    font-family: 'Doppio One'
+#main-title
+ font-family: 'Doppio One'
+
+#main-menu
+ background-color: #363636
+
+#space-content
+  background-color: #F5F5F5
+  min-height: 100vh
+
+#main-content
+ background-color: #7f828b
+
+.p-1
+ padding: 1em
+
+.border-test
+ border: 1px solid red
 </style>
