@@ -24,7 +24,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     // '@nuxtjs/eslint-module',
     // nuxt-color-mode
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -61,5 +62,25 @@ export default {
 
   // transitions
   pageTransition: "fade",
-  layoutTransition: "bounce"
+  layoutTransition: "bounce",
+
+  // fontawesome icon
+  fontawesome: {
+    icons: {
+      solid: [
+        'faHome',
+        'faHistory',
+        'faAddressBook',
+        'faBars',
+        'faTools',
+        'faEye',
+        'faClipboardCheck',
+        'faDollarSign',
+        'faCheckCircle',
+        'faChartLine',
+        'faCalendarAlt',
+        'faHandsHelping',
+      ]
+    }
+  }
 }
