@@ -56,6 +56,7 @@ export default {
   // middleware
   router: {
     // middleware: ['auth']
+    linkActiveClass: 'active-link',
   },
   // i18n
   i18n: {},
