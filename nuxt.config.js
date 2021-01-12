@@ -11,7 +11,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  // css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -24,7 +24,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     // '@nuxtjs/eslint-module',
     // nuxt-color-mode
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -40,6 +41,11 @@ export default {
     // nuxt i18n
     'nuxt-i18n'
   ],
+  css: [
+    'bulma',
+    './assets/css/main.css',
+    './assets/css/buefy.scss',
+  ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
@@ -50,11 +56,32 @@ export default {
   // middleware
   router: {
     // middleware: ['auth']
+    linkActiveClass: 'active-link',
   },
   // i18n
   i18n: {},
 
   // transitions
   pageTransition: "fade",
-  layoutTransition: "bounce"
+  layoutTransition: "bounce",
+
+  // fontawesome icon
+  fontawesome: {
+    icons: {
+      solid: [
+        'faHome',
+        'faHistory',
+        'faAddressBook',
+        'faBars',
+        'faTools',
+        'faEye',
+        'faClipboardCheck',
+        'faDollarSign',
+        'faCheckCircle',
+        'faChartLine',
+        'faCalendarAlt',
+        'faHandsHelping',
+      ]
+    }
+  }
 }
